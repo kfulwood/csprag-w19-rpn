@@ -10,7 +10,7 @@ operators = {
         '/': operator.truediv,
 }
 
-def calculate(arg):
+def calculate(myarg):
     stack = list()
     for token in myarg.split():
         try:
@@ -29,7 +29,8 @@ def calculate(arg):
 
 def main():
     while True:
-        calculate(input("rpn calc> "))
+        result = calculate(input("rpn calc> "))
+        print("Result: ", result)
 
 if __name__== '__main__': # Note: that's underscore underscore n a m e ..."
     main()
